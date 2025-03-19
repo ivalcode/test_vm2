@@ -17,6 +17,8 @@ with open(f'{asm_file}.py', 'w', encoding='utf-8') as programm:
   programm.write('COMMANDS = [\n')
 
   for cmd in commands:
+    if not cmd:
+      continue
     if int(cmd[1]) > sum_vars:
       sum_vars = int(cmd[1]) # получаем количество переменных в коде
 
