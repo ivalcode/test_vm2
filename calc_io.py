@@ -22,7 +22,7 @@ COMMANDS = [
 8, 2, 0,
 6, 2, 1,
 17, 2,
-BYTECODES["halt"]
+0
 ]
 VARS = {
 0: 0,

@@ -27,7 +27,7 @@ with open(f'{asm_file}.py', 'w', encoding='utf-8') as programm:
     else:
       exit('Неверный формат ассемблернго кода')
 
-  programm.write('BYTECODES["halt"]\n')
+  programm.write(f'{BYTECODES["halt"]}\n')
   programm.write(']\n')
   programm.write('VARS = {\n')
 
