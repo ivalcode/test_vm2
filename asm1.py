@@ -1,3 +1,5 @@
+from casm_opcodes import BYTECODES
+
 asm_file = 'calc_io'
 
 commands = []
@@ -19,9 +21,9 @@ with open(f'{asm_file}.py', 'w', encoding='utf-8') as programm:
       sum_vars = int(cmd[1]) # получаем количество переменных в коде
 
     if len(cmd) == 2:
-      programm.write(f'BYTECODES["{cmd[0]}"], {cmd[1]},\n')
+      programm.write(f'{BYTECODES[cmd[0]]}, {cmd[1]},\n')
     elif len(cmd) == 3:
-        programm.write(f'BYTECODES["{cmd[0]}"], {cmd[1]}, {cmd[2]},\n')
+        programm.write(f'{BYTECODES[cmd[0]]}, {cmd[1]}, {cmd[2]},\n')
     else:
       exit('Неверный формат ассемблернго кода')
 
